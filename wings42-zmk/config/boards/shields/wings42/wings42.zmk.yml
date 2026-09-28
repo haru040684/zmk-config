@@ -1,0 +1,12 @@
+file_format: "1"
+id: wings42
+name: wings42
+type: shield
+url: https://shop.dailycraft.jp/products/wings42_v3
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - wings42_left
+  - wings42_right

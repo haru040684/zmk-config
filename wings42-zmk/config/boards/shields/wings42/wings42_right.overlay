@@ -1,0 +1,21 @@
+#include "wings42.dtsi"
+
+/*
+ * Right half: matrix columns 6-11, physical left -> right.
+ * The PCB is mirrored, so QMK col 5 (F4) is the innermost key and col 0 (B3)
+ * is the outermost key. Pin order is therefore reversed vs. the left half.
+ */
+&default_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 21 GPIO_ACTIVE_HIGH>  /* F4 (A3) */
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>  /* F5 (A2) */
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>  /* F6 (A1) */
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>  /* F7 (A0) */
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* B1 */
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* B3 */
+        ;
+};

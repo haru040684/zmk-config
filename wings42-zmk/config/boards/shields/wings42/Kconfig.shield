@@ -1,0 +1,5 @@
+config SHIELD_WINGS42_LEFT
+	def_bool $(shields_list_contains,wings42_left)
+
+config SHIELD_WINGS42_RIGHT
+	def_bool $(shields_list_contains,wings42_right)
